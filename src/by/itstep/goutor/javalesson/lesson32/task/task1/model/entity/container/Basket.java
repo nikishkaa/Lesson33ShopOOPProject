@@ -10,6 +10,10 @@ public class Basket {
     private Milk[] milks;
     private Bread[] breads;
 
+    private int sizeMilk = 0;
+    private int sizeBread = 0;
+    private int sizeOrange = 0;
+
     public Basket() {
         oranges = new Orange[DEFAULT_SIZE];
         milks = new Milk[DEFAULT_SIZE];
@@ -18,8 +22,11 @@ public class Basket {
 
     public Basket(Orange[] oranges, Milk[] milks, Bread[] breads) {
         this.oranges = oranges;
+        sizeOrange = oranges.length;
         this.milks = milks;
+        sizeMilk = milks.length;
         this.breads = breads;
+        sizeBread = breads.length;
     }
 
     public Orange[] getOranges() {
@@ -44,5 +51,17 @@ public class Basket {
 
     public void setBreads(Bread[] breads) {
         this.breads = breads;
+    }
+
+    public int getSizeMilk() {
+        return sizeMilk;
+    }
+
+    public int getSizeBread() {
+        return sizeBread;
+    }
+
+    public int getSizeOrange() {
+        return sizeOrange;
     }
 }

@@ -7,9 +7,9 @@ import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.container.Ba
 
 public class ShopAssistance {
     public static double calculateTotalPrice(Basket basket) {
-        if (basket == null || basket.getBreads().length == 0
-                || basket.getOranges().length == 0
-                || basket.getMilks().length == 0) {
+        if (basket == null || (basket.getSizeBread() == 0
+                && basket.getSizeOrange() == 0
+                && basket.getSizeMilk() == 0)) {
             return -1;
         }
 
