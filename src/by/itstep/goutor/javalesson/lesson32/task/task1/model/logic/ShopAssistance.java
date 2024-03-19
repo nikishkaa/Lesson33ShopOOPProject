@@ -3,13 +3,15 @@ package by.itstep.goutor.javalesson.lesson32.task.task1.model.logic;
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Bread;
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Milk;
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Orange;
+import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Water;
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.container.Basket;
 
 public class ShopAssistance {
     public static double calculateTotalPrice(Basket basket) {
         if (basket == null || (basket.getSizeBread() == 0
                 && basket.getSizeOrange() == 0
-                && basket.getSizeMilk() == 0)) {
+                && basket.getSizeMilk() == 0
+                && basket.getSizeWater() == 0)) {
             return -1;
         }
 
@@ -25,6 +27,10 @@ public class ShopAssistance {
 
         for (Bread bread : basket.getBreads()) {
             total += bread.getPrice();
+        }
+
+        for (Water water : basket.getWaters()) {
+            total += water.getPrice();
         }
 
         return total;
