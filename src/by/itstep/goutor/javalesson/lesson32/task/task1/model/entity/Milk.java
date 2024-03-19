@@ -1,17 +1,17 @@
 package by.itstep.goutor.javalesson.lesson32.task.task1.model.entity;
 
-public class Milk {
-    private  double volume;
+public class Milk extends Product {
+    private double volume;
     private double fat;
-    private double money;
+    private double price;
 
     public Milk() {
     }
 
-    public Milk(double volume, double fat, double money) {
-        this.volume = volume;
+    public Milk(double volume, double fat, double price) {
+        super(price);
         this.fat = fat;
-        this.money = money;
+        this.volume = volume;
     }
 
     public double getVolume() {
@@ -22,9 +22,6 @@ public class Milk {
         return fat;
     }
 
-    public double getMoney() {
-        return money;
-    }
 
     public void setVolume(double volume) {
         this.volume = volume;
@@ -34,7 +31,12 @@ public class Milk {
         this.fat = fat;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
+    @Override
+    public String toString() {
+        return "Milk{" +
+                "volume = " + volume +
+                ", fat = " + fat +
+                ", money = " + super.toString() +
+                '}';
     }
 }

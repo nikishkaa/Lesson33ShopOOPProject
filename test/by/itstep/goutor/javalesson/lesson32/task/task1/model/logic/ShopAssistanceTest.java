@@ -1,9 +1,6 @@
 package by.itstep.goutor.javalesson.lesson32.task.task1.model.logic;
 
-import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Bread;
-import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Milk;
-import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Orange;
-import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.Water;
+import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.*;
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.container.Basket;
 import org.junit.Test;
 
@@ -17,6 +14,7 @@ public class ShopAssistanceTest {
         Bread[] breads = {new Bread("Black", "first", 1.5)};
         Orange[] oranges = {new Orange(0.5, 3000, 100)};
         Water[] waters ={new Water(2)} ;
+        Product[] products = {};
         Basket basket = new Basket(oranges, milks, breads, waters);
         double expected = 6;
 
