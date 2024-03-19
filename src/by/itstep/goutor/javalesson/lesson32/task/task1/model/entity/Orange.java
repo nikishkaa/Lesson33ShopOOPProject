@@ -9,9 +9,10 @@ public class Orange {
     }
 
     public Orange(double cost, int diameter, int vitaminC) {
-        this.cost = cost;
         this.diameter = diameter;
         this.vitaminC = vitaminC;
+        this.cost = cost;
+
     }
 
     public double getCost() {
