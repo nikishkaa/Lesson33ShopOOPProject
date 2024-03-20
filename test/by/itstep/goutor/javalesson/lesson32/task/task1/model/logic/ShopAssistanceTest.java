@@ -10,13 +10,14 @@ public class ShopAssistanceTest {
     @Test
     public void testCalculateTotalPricePositive() {
         // A - arrange
-        Milk[] milks = {new Milk(1000, 3.5, 2)};
-        Bread[] breads = {new Bread("Black", "first", 1.5)};
-        Orange[] oranges = {new Orange(0.5, 3000, 100)};
-        Water[] waters ={new Water(2)} ;
-        Product[] products = {};
-        Basket basket = new Basket(oranges, milks, breads, waters);
-        double expected = 6;
+        Product[] products = {new Milk(1000, 3.5, 2.0),
+                new Bread("Black", "first", 1.5),
+                new Orange(100, 3000, 0.5),
+                new Water(2.0)};
+
+        Basket basket = new Basket(products);
+
+        double expected = 6.0;
 
         // A - act
         double actual = ShopAssistance.calculateTotalPrice(basket);
@@ -27,28 +28,24 @@ public class ShopAssistanceTest {
 
     @Test
     public void testCalculateTotalPriceByNull() {
-        // A - arrange
         Basket basket = null;
         double expected = -1;
 
-        // A - act
         double actual = ShopAssistance.calculateTotalPrice(basket);
 
-        // A - assert
         assertEquals(expected, actual, 0.0);
-    }
 
+    }
 
     @Test
     public void testCalculateTotalPriceByEmptyBasket() {
-        // A - arrange
         Basket basket = new Basket();
         double expected = -1;
 
-        // A - act
         double actual = ShopAssistance.calculateTotalPrice(basket);
 
-        // A - assert
         assertEquals(expected, actual, 0.0);
+
     }
+
 }

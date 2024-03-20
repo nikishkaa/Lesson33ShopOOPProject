@@ -4,7 +4,9 @@ import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.*;
 
 public class Basket {
     public static final int DEFAULT_SIZE = 10;
+
     private Product[] products;
+
     private int size = 0;
 
     public Basket() {
@@ -14,18 +16,21 @@ public class Basket {
     public Basket(Product[] products) {
         this.products = products;
         size = products.length;
-
     }
 
     public Product[] getProducts() {
         return products;
     }
 
+    public void setProducts(Product[] products) {
+        this.products = products;
+    }
+
     public int getSize() {
         return size;
     }
 
-    public void setProducts(Product[] products) {
-        this.products = products;
+    public void setSize(int size) {
+        this.size = size;
     }
 }

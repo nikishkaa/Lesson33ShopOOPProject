@@ -22,9 +22,7 @@ public class Product {
         } else {
             throw new Exception();
         }
-
     }
-
 
     @Override
     public String toString() {

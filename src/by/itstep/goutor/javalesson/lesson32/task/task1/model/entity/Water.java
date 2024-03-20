@@ -9,15 +9,9 @@ public class Water extends Product {
         super(price);
     }
 
-    public double getPrice() {
-    }
-
-    public void setPrice(double price) {
-
-    }
 
     @Override
     public String toString() {
-        return "Water{}" + super.toString();
+        return "Water{ " + super.toString() + '}';
     }
 }

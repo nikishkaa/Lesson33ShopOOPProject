@@ -3,7 +3,6 @@ package by.itstep.goutor.javalesson.lesson32.task.task1.model.entity;
 public class Bread extends Product {
     private String color;
     private String flour;
-    private double price;
 
     public Bread() {
     }
@@ -18,13 +17,12 @@ public class Bread extends Product {
         return color;
     }
 
-    public String getFlour() {
-        return flour;
-    }
-
-
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getFlour() {
+        return flour;
     }
 
     public void setFlour(String flour) {
@@ -34,9 +32,8 @@ public class Bread extends Product {
     @Override
     public String toString() {
         return "Bread{" +
-                "color = '" + color + '\'' +
-                ", flour = '" + flour + '\'' +
-                ", price = " + super.toString() +
-                '}';
+                "color = " + color + '\'' +
+                ", flour = " + flour + '\'' +
+                ", " + super.toString() + '}';
     }
 }
