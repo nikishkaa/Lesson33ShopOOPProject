@@ -2,35 +2,34 @@ package by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.container;
 
 import by.itstep.goutor.javalesson.lesson32.task.task1.model.entity.*;
 
+import java.util.Arrays;
+
 public class Basket {
     public static final int DEFAULT_SIZE = 10;
 
-    private Product[] products;
-
-    private int size = 0;
+    Container container;
 
     public Basket() {
-        products = new Product[DEFAULT_SIZE];
+        container = new ArrayImplementation();
     }
 
-    public Basket(Product[] products) {
-        this.products = products;
-        size = products.length;
+    public Basket(Container container) {
+        this.container = container;
     }
 
-    public Product[] getProducts() {
-        return products;
-    }
-
-    public void setProducts(Product[] products) {
-        this.products = products;
-    }
 
     public int getSize() {
-        return size;
+        return container.size();
     }
 
-    public void setSize(int size) {
-        this.size = size;
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("List of product:\n");
+
+        for (int i = 0; i < container.size(); i++) {
+            builder.append(container.get(i)).append("\n");
+        }
+        return builder.toString();
     }
 }
