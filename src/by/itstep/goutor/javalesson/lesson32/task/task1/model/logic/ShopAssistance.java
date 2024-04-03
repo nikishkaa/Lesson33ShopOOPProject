@@ -14,6 +14,7 @@ public class ShopAssistance {
         for (Product product : basket) {
             total += product.getPrice();
         }
+
         return total;
     }
 }
